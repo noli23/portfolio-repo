@@ -1,8 +1,11 @@
 ---
-Logo: image/leaf_256x256.png
+Logo: image/fox.jpg
 Tagline: My portfolio.
 Social:
     - title: Link till sidans github repo.
-      url: https://github.com/dbwebb-se/design-v3
+      url: https://github.com/noli23/portfolio-repo
       icon: github
+    - title: Länk till min instagram.
+      url: https://instagram.com/noah.lindberg_?igshid=OGQ5ZDc2ODk2ZA==
+      icon: instagram
 ---
