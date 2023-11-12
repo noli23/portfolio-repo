@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,500;1,300&family=Merriweather:ital,wght@1,300&display=swap');
+
+$old-fashioned-font: 'Merriweather' , serif;
+$modern-font: 'Merriweather Sans' , sans-serif;
+$base-line-height: 1.4;
+$base-font-size: 2rem;
+$base-margin: 16;
+$base-background-color: #f0f;
+$base-letter-spacing: 3px;
+
+@mixin line-height-and-font-size {
+    line-height: $base-line-height;
+    font-size: $base-font-size;
+    margin: $base-margin;
+    background-color: $base-background-color;
+    letter-spacing: $base-letter-spacing;
+}
+
+.old-fashioned {
+    @include line-height-and-font-size;
+    font-family: $old-fashioned-font;
+}
+
+.modern {
+    @include line-height-and-font-size;
+    font-family: $modern-font;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.worst-ever {
+    @include line-height-and-font-size;
+    line-height: 0.7;
+    letter-spacing: -3px;
+    background-color: rgb(100, 149, 237);
+    color: rgb(250, 128, 114);
+    padding: 1rem;
+}
