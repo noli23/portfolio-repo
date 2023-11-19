@@ -6114,23 +6114,23 @@ readers do not read off random characters that represent icons */
 }
 
 .old-fashioned {
-  font-family: "Merriweather", serif;
   line-height: 1.4;
   font-size: 2rem;
   margin: 16;
   background-color: #f0f;
   letter-spacing: 3px;
+  font-family: "Merriweather", serif;
 }
 
 .modern {
-  font-family: "Merriweather Sans", sans-serif;
-  letter-spacing: 2px;
-  text-transform: uppercase;
   line-height: 1.4;
   font-size: 2rem;
   margin: 16;
   background-color: #f0f;
   letter-spacing: 3px;
+  font-family: "Merriweather Sans", sans-serif;
+  letter-spacing: 2px;
+  text-transform: uppercase;
 }
 
 .worst-ever {
@@ -6141,8 +6141,8 @@ readers do not read off random characters that represent icons */
   letter-spacing: 3px;
   line-height: 0.7;
   letter-spacing: -3px;
-  background-color: cornflowerblue;
-  color: salmon;
+  background-color: rgb(100, 149, 237);
+  color: rgb(250, 128, 114);
   padding: 1rem;
 }
 
@@ -6155,13 +6155,13 @@ readers do not read off random characters that represent icons */
   list-style: none;
   padding: 0;
 }
-.nav ul li a {
+.nav li a {
   color: #333;
   text-decoration: none;
   padding: 5px 10px;
 }
-.nav ul li a.active {
-  color: aqua;
+.nav li a.active {
+  color: rgb(0, 255, 255);
 }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -6478,7 +6478,16 @@ body {
 }
 
 * {
-  color: #ffffff;
+  color: #fff;
+}
+
+.main {
+  width: 64em;
+  margin: 5%;
+}
+
+.container {
+  margin: 5%;
 }
 
 blockquote {
@@ -6514,4 +6523,100 @@ pre code {
   background: transparent;
   overflow-x: auto;
   line-height: 1.4;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+}
+
+.box {
+  background-color: rgb(128, 128, 128);
+  padding: 20px;
+  text-align: center;
+  border-radius: 8px;
+}
+
+.box.html {
+  grid-column: span 2;
+}
+
+.box.js {
+  grid-column: span 2;
+}
+
+.box.python {
+  grid-column: span 3;
+}
+
+.box.sqlite {
+  grid-column: span 2;
+}
+
+@media (max-width: 767px) {
+  .grid-container {
+    width: fit-content;
+    justify-content: center;
+    grid-template-columns: 1fr;
+  }
+  .box.html,
+  .box.js,
+  .box.sqlite,
+  .box.python {
+    grid-column: span 1;
+  }
+}
+.container {
+  display: flex;
+}
+
+.sidebar {
+  width: 250px;
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+}
+
+.sidebar h2 {
+  margin-bottom: 20px;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar li {
+  margin-bottom: 10px;
+}
+
+.sidebar a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.sidebar a:hover {
+  text-decoration: underline;
+}
+
+.content {
+  flex: 1;
+  padding: 20px;
+}
+
+header {
+  border-bottom: 2px solid #333;
+  margin-bottom: 20px;
+}
+
+pre {
+  background-color: #f4f4f4;
+  padding: 10px;
+  border-radius: 5px;
+  overflow-x: auto;
+}
+
+code {
+  color: #333;
 }

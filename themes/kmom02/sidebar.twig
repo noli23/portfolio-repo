@@ -1,0 +1,27 @@
+{% include 'incl/header.twig' %}
+
+<body>
+    {% include 'incl/nav.twig' %}
+
+    <div class="container">
+        <div class="sidebar">
+            <ul>
+                {% for page in pages|slice(4, -2) %}
+                    <li><a href="{{ page.url }}">{{ page.title }}</a></li>
+                {% endfor %}
+            </ul>
+        </div>
+
+        <div class="content">
+            {% if content is defined %}
+                {{ content|raw }}
+            {% else %}
+                <p>Select a page from the sidebar.</p>
+            {% endif %}
+        </div>
+    </div>
+
+    {% include 'incl/footer.twig' %}
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+}
+
+.box {
+    background-color: rgb(128, 128, 128);
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+}
+
+.box.html {
+    grid-column: span 2;
+}
+
+.box.js {
+    grid-column: span 2;
+}
+
+.box.python {
+    grid-column: span 3;
+}
+
+.box.sqlite {
+    grid-column: span 2; 
+}
+
+@media (max-width: 767px) {
+    .grid-container {
+        width: fit-content;
+        justify-content: center;
+        grid-template-columns: 1fr;
+    }
+
+    .box.html,
+    .box.js,
+    .box.sqlite,
+    .box.python {
+        grid-column: span 1;
+    }
+}
