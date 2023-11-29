@@ -4,8 +4,8 @@
 
 .sidebar {
     width: 250px;
-    background-color: #333;
-    color: #fff;
+    background-color: $sidebar-background-color;
+    color: $sidebar-color;
     padding: 20px;
     display: block;
 }
@@ -25,7 +25,7 @@
 
 .sidebar a {
     text-decoration: none;
-    color: #fff;
+    color: $sidebar-a-color;
 }
 
 .sidebar a:hover {
@@ -43,14 +43,14 @@ header {
 }
 
 pre {
-    background-color: #f4f4f4;
+    background-color: $pre-background-color;
     padding: 10px;
     border-radius: 5px;
     overflow-x: auto;
 }
 
 code {
-    color: #333;
+    color: $code-color;
 }
 
 @media screen and (max-width: 600px) {

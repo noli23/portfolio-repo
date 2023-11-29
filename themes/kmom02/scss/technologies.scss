@@ -5,7 +5,7 @@
 }
 
 .box {
-    background-color: rgb(128, 128, 128);
+    background-color: $box-background-color;
     padding: 20px;
     text-align: center;
     border-radius: 8px;

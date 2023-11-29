@@ -1,4 +1,7 @@
-<?php
+<?php 
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 
 if (is_file(__DIR__ . '/vendor/autoload.php')) {
     require_once(__DIR__ . '/vendor/autoload.php');
@@ -15,11 +18,6 @@ $pico = new Pico(
     'plugins/', // plugins dir
     'themes/'   // themes dir
 );
-
-// override configuration?
-$pico->setConfig(array(
-    'session' => $_SESSION
-));
 
 // run application
 echo $pico->run();

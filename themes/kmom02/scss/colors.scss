@@ -1,0 +1,20 @@
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.image-container img {
+    margin: 0 10px;
+}
+
+.tablecolor {
+    border-spacing: 4px;
+    border-collapse: separate;
+}
+
+.tablecolor td {
+    height: 50px;
+    width: 125px;
+}
